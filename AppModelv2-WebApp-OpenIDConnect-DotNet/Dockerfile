@@ -1,25 +1,9 @@
 #Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
 #For more information, please see https://aka.ms/containercompat
 
-#FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8-windowsservercore-ltsc2019
-#ARG source
-#WORKDIR /inetpub/wwwroot
-#COPY ${source:-obj/Docker/publish} .
-##COPY ${source:-certificate.ps1} .
-##RUN powershell.exe ./certificate.ps1
-#
-#ENV CERT_PASS password
-##RUN ["powershell", "C:/inetpub/wwwroot/ssl.ps1"]
-#RUN powershell.exe C:\inetpub\wwwroot\ssl.ps1
-
-
 FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8
 ARG source
 WORKDIR /inetpub/wwwroot
 COPY ${source:-obj/Docker/publish} .
-
 EXPOSE 443
-
 ENV CERT_PASS password
-
-#RUN ["powershell", "C:/inetpub/wwwroot/ssl.ps1"]
