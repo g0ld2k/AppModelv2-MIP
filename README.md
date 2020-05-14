@@ -1,3 +1,22 @@
+# Getting Started
+
+Download and run solution.
+
+After container is running.  Run the following from powershell:
+```
+docker exec -ti AppModelv2-WebApp-OpenIDConnect-DotNet powershell C:\inetpub\wwwroot\ssl.ps1
+```
+
+# Notes
+The Redirect URI is:
+```
+https://localhost:4443/redirect/
+```
+
+
+All below is canned from the sample project
+---
+
 ---
 page_type: sample
 languages:
