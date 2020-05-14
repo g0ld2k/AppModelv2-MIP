@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  appmodelv2-webapp-openidconnect-dotnet:
+    image: ${DOCKER_REGISTRY-}appmodelv2webappopenidconnectdotnet
+    build:
+      context: .\AppModelv2-WebApp-OpenIDConnect-DotNet
+      dockerfile: Dockerfile

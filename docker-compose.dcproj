@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectVersion>2.1</ProjectVersion>
+    <DockerTargetOS>Windows</DockerTargetOS>
+    <ProjectGuid>667d2f61-ce02-4189-b1cb-e56ec95b7dd0</ProjectGuid>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerServiceUrl>http://{ServiceIPAddress}</DockerServiceUrl>
+    <DockerServiceName>appmodelv2-webapp-openidconnect-dotnet</DockerServiceName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="docker-compose.override.yml">
+      <DependentUpon>docker-compose.yml</DependentUpon>
+    </None>
+    <None Include="docker-compose.yml" />
+  </ItemGroup>
+</Project>
